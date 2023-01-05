@@ -122,7 +122,7 @@ button.addEventListener("click", () => {
   charactersDetails.style.display = "none";
 
   //remove from browser history and favourite list on pressing remove button is handled here
-  liList = favouriteList.querySelectorAll("li");
+  let liList = favouriteList.querySelectorAll("li");
   liList.forEach((li) => {
     var button2 = li.querySelector("#remove");
     button2.addEventListener("click", (e) => {
