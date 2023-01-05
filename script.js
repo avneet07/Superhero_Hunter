@@ -123,15 +123,17 @@ button.addEventListener("click", () => {
 
   //remove from browser history and favourite list on pressing remove button is handled here
   let liList = favouriteList.querySelectorAll("li");
+  console.log(liList);
   liList.forEach((li) => {
     var button2 = li.querySelector("#remove");
     button2.addEventListener("click", (e) => {
-      e.target.parentElement.parentElement.remove();
-      let result = listContents.indexOf(
-        e.target.parentElement.parentElement.parentElement.innerHTML
-      );
+     
+      let result = listContents.indexOf(e.target.parentElement.parentElement.parentElement.innerHTML);
+      console.log(e.target.parentElement.parentElement.parentElement.innerHTML);
+      console.log(result);
       listContents.splice(result, 1);
       localStorage.setItem("favourites", JSON.stringify(listContents));
+      e.target.parentElement.parentElement.remove();
     });
   });
 });
