@@ -128,7 +128,7 @@ button.addEventListener("click", () => {
     button2.addEventListener("click", (e) => {
       e.target.parentElement.parentElement.remove();
       let result = listContents.indexOf(
-        e.target.parentElement.parentElement.innerHTML
+        e.target.parentElement.parentElement.parentElement.innerHTML
       );
       listContents.splice(result, 1);
       localStorage.setItem("favourites", JSON.stringify(listContents));
