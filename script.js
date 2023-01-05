@@ -126,7 +126,7 @@ button.addEventListener("click", () => {
   liList.forEach((li) => {
     var button2 = li.querySelector("#remove");
     button2.addEventListener("click", (e) => {
-      e.target.parentElement.parentElement.parentElement.parentElement.remove();
+      e.target.parentElement.parentElement.remove();
       let result = listContents.indexOf(
         e.target.parentElement.parentElement.parentElement.innerHTML
       );
